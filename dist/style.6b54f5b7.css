@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, .app {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=/style.6b54f5b7.css.map */

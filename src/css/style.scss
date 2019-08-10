@@ -1,0 +1,11 @@
+@import '/css/vars.scss';
+
+* { box-sizing: border-box; }
+
+html, body, .app {
+	position: relative;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+html { font-size: $base-unit; }
