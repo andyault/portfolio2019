@@ -8,4 +8,31 @@ html, body, .app {
 	min-height: 100vh;
 }
 
-html { font-size: $base-unit; }
+html {
+	font-size: $base-unit;
+	font-family: 'TT Commons', sans-serif;
+}
+
+body {
+	font-size: 1.25rem;
+	line-height: 1.4;
+}
+
+//
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.container-small { width: 600px; }
+
+.page-container { padding: 2rem 0; }
+
+.hero {
+	display: flex;
+	position: relative;
+	height: calc(100vh - #{$header-height});
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

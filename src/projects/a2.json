@@ -1,0 +1,7 @@
+{
+	"img": "/img/a2.png",
+	"startDate": 2018,
+	"endDate": 2019,
+	"title": "A2 Analytics",
+	"desc": "Worked on a team as the main developer and technical lead for an IoT solution to track Bluetooth devices indoors and outdoors. Implemented the project from scratch in Node.js using best practices and new technologies for use on remote devices and as a cloud service o ering. Designed, architected, and implemented streaming, serverless backend for scale on AWS, including multiple environments and continuous integration and deployment. Technologies used were Node.js, Docker, AWS, MySQL, and Websockets."
+}

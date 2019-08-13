@@ -14915,6 +14915,8 @@ return VueRouter;
 
 })));
 
+},{}],"static/resume.pdf":[function(require,module,exports) {
+module.exports = "/resume.e73587d9.pdf";
 },{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -23687,6 +23689,68 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _resume = _interopRequireDefault(require("/static/resume.pdf"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -23726,7 +23790,9 @@ exports.default = void 0;
 //
 var _default = {
   data: function data() {
-    return {};
+    return {
+      resume: _resume.default
+    };
   }
 };
 exports.default = _default;
@@ -23742,30 +23808,79 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("header", { staticClass: "app-header" }, [
-      _c("div", { staticClass: "app-header-container container" }, [
-        _c("div", { staticClass: "app-header-logo" }, [
-          _vm._v("\n\t\t\tlogo\n\t\t")
-        ]),
+  return _c("header", { staticClass: "app-header" }, [
+    _c(
+      "div",
+      { staticClass: "app-header-container container" },
+      [
+        _c(
+          "router-link",
+          {
+            staticClass: "app-header-link app-header-logo",
+            attrs: { to: "/" }
+          },
+          [
+            _c("div", { staticClass: "app-header-link-inner" }, [
+              _vm._v("andrewault")
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("nav", { staticClass: "app-header-nav" }, [
           _c("ul", { staticClass: "app-header-nav-list" }, [
+            _c(
+              "li",
+              { staticClass: "app-header-nav-list-item" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "app-header-link", attrs: { to: "/" } },
+                  [
+                    _c("div", { staticClass: "app-header-link-inner" }, [
+                      _vm._v("about")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "app-header-nav-list-item" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "app-header-link", attrs: { to: "/blog" } },
+                  [
+                    _c("div", { staticClass: "app-header-link-inner" }, [
+                      _vm._v("blog")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
             _c("li", { staticClass: "app-header-nav-list-item" }, [
-              _vm._v("\n\t\t\t\t\thome\n\t\t\t\t")
+              _c(
+                "a",
+                { staticClass: "app-header-link", attrs: { href: _vm.resume } },
+                [
+                  _c("div", { staticClass: "app-header-link-inner" }, [
+                    _vm._v("resume")
+                  ])
+                ]
+              )
             ])
           ])
         ])
-      ])
-    ])
-  }
-]
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -23798,7 +23913,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/views/index.vue":[function(require,module,exports) {
+},{"/static/resume.pdf":"static/resume.pdf","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/views/index.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23810,17 +23925,6 @@ var _appHeader = _interopRequireDefault(require("/js/components/app-header.vue")
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -23870,23 +23974,15 @@ exports.default = _default;
   return _c(
     "div",
     { staticClass: "app-container" },
-    [_c("app-header"), _vm._v(" "), _vm._m(0)],
+    [
+      _c("app-header"),
+      _vm._v(" "),
+      _c("div", { staticClass: "app-body" }, [_c("router-view")], 1)
+    ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "app-body" }, [
-      _c("div", { staticClass: "app-body-container container" }, [
-        _c("div", { staticStyle: { height: "200vh" } }, [_vm._v("tall")]),
-        _vm._v("\n\n\t\t\tbottom\n\t\t")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -23919,7 +24015,1514 @@ render._withStripped = true
       
       }
     })();
-},{"/js/components/app-header.vue":"js/components/app-header.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/routes.js":[function(require,module,exports) {
+},{"/js/components/app-header.vue":"js/components/app-header.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/hero-bg.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import FiltersSvg from '/img/filters.svg';
+var _default = {
+  data: function data() {
+    return {
+      mult: 25,
+      sub: -7,
+      blobs: [{
+        top: 40,
+        left: -792,
+        size: 893,
+        bg: '#90f'
+      }, {
+        top: 195,
+        left: 619,
+        size: 480,
+        bg: '#90f'
+      }, {
+        top: -85,
+        left: -273,
+        size: 288,
+        bg: '#90f'
+      }, {
+        top: 28,
+        left: -144,
+        size: 100,
+        bg: '#90f'
+      }, {
+        top: 559,
+        left: 244,
+        size: 720,
+        bg: '#90f'
+      }, {
+        top: -284,
+        left: 244,
+        size: 216,
+        bg: '#90f'
+      }]
+    };
+  },
+  components: {// FiltersSvg
+  }
+};
+exports.default = _default;
+        var $c4cb3a = exports.default || module.exports;
+      
+      if (typeof $c4cb3a === 'function') {
+        $c4cb3a = $c4cb3a.options;
+      }
+    
+        /* template */
+        Object.assign($c4cb3a, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "hero-bg" }, [
+    _c(
+      "div",
+      { staticClass: "blobs" },
+      _vm._l(_vm.blobs, function(blob) {
+        return _c("div", {
+          staticClass: "blob",
+          style: {
+            top: "calc(50% + " + blob.top + "px)",
+            left: "calc(50% + " + blob.left + "px)",
+            width: blob.size + "px",
+            height: blob.size + "px",
+            background: blob.bg
+          }
+        })
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _c("svg", [
+      _c(
+        "filter",
+        { attrs: { id: "goo" } },
+        [
+          _c("feGaussianBlur", {
+            attrs: { in: "SourceGraphic", stdDeviation: "10", result: "blur" }
+          }),
+          _vm._v(" "),
+          _c("feColorMatrix", {
+            attrs: {
+              in: "blur",
+              type: "matrix",
+              values:
+                "1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 " +
+                _vm.mult +
+                " " +
+                _vm.sub,
+              result: "goo"
+            }
+          }),
+          _vm._v(" "),
+          _c("feComposite", {
+            attrs: { in: "SourceGraphic", in2: "goo", operator: "atop" }
+          })
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-c4cb3a",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$c4cb3a', $c4cb3a);
+          } else {
+            api.reload('$c4cb3a', $c4cb3a);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
+
+// shim for using process in browser
+var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+  throw new Error('setTimeout has not been defined');
+}
+
+function defaultClearTimeout() {
+  throw new Error('clearTimeout has not been defined');
+}
+
+(function () {
+  try {
+    if (typeof setTimeout === 'function') {
+      cachedSetTimeout = setTimeout;
+    } else {
+      cachedSetTimeout = defaultSetTimout;
+    }
+  } catch (e) {
+    cachedSetTimeout = defaultSetTimout;
+  }
+
+  try {
+    if (typeof clearTimeout === 'function') {
+      cachedClearTimeout = clearTimeout;
+    } else {
+      cachedClearTimeout = defaultClearTimeout;
+    }
+  } catch (e) {
+    cachedClearTimeout = defaultClearTimeout;
+  }
+})();
+
+function runTimeout(fun) {
+  if (cachedSetTimeout === setTimeout) {
+    //normal enviroments in sane situations
+    return setTimeout(fun, 0);
+  } // if setTimeout wasn't available but was latter defined
+
+
+  if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+    cachedSetTimeout = setTimeout;
+    return setTimeout(fun, 0);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedSetTimeout(fun, 0);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+      return cachedSetTimeout.call(null, fun, 0);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+      return cachedSetTimeout.call(this, fun, 0);
+    }
+  }
+}
+
+function runClearTimeout(marker) {
+  if (cachedClearTimeout === clearTimeout) {
+    //normal enviroments in sane situations
+    return clearTimeout(marker);
+  } // if clearTimeout wasn't available but was latter defined
+
+
+  if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+    cachedClearTimeout = clearTimeout;
+    return clearTimeout(marker);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedClearTimeout(marker);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+      return cachedClearTimeout.call(null, marker);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+      // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+      return cachedClearTimeout.call(this, marker);
+    }
+  }
+}
+
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+  if (!draining || !currentQueue) {
+    return;
+  }
+
+  draining = false;
+
+  if (currentQueue.length) {
+    queue = currentQueue.concat(queue);
+  } else {
+    queueIndex = -1;
+  }
+
+  if (queue.length) {
+    drainQueue();
+  }
+}
+
+function drainQueue() {
+  if (draining) {
+    return;
+  }
+
+  var timeout = runTimeout(cleanUpNextTick);
+  draining = true;
+  var len = queue.length;
+
+  while (len) {
+    currentQueue = queue;
+    queue = [];
+
+    while (++queueIndex < len) {
+      if (currentQueue) {
+        currentQueue[queueIndex].run();
+      }
+    }
+
+    queueIndex = -1;
+    len = queue.length;
+  }
+
+  currentQueue = null;
+  draining = false;
+  runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+  var args = new Array(arguments.length - 1);
+
+  if (arguments.length > 1) {
+    for (var i = 1; i < arguments.length; i++) {
+      args[i - 1] = arguments[i];
+    }
+  }
+
+  queue.push(new Item(fun, args));
+
+  if (queue.length === 1 && !draining) {
+    runTimeout(drainQueue);
+  }
+}; // v8 likes predictible objects
+
+
+function Item(fun, array) {
+  this.fun = fun;
+  this.array = array;
+}
+
+Item.prototype.run = function () {
+  this.fun.apply(null, this.array);
+};
+
+process.title = 'browser';
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) {
+  return [];
+};
+
+process.binding = function (name) {
+  throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () {
+  return '/';
+};
+
+process.chdir = function (dir) {
+  throw new Error('process.chdir is not supported');
+};
+
+process.umask = function () {
+  return 0;
+};
+},{}],"../node_modules/path-browserify/index.js":[function(require,module,exports) {
+var process = require("process");
+// .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
+// backported and transplited with Babel, with backwards-compat fixes
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function (path) {
+  if (typeof path !== 'string') path = path + '';
+  if (path.length === 0) return '.';
+  var code = path.charCodeAt(0);
+  var hasRoot = code === 47 /*/*/;
+  var end = -1;
+  var matchedSlash = true;
+  for (var i = path.length - 1; i >= 1; --i) {
+    code = path.charCodeAt(i);
+    if (code === 47 /*/*/) {
+        if (!matchedSlash) {
+          end = i;
+          break;
+        }
+      } else {
+      // We saw the first non-path separator
+      matchedSlash = false;
+    }
+  }
+
+  if (end === -1) return hasRoot ? '/' : '.';
+  if (hasRoot && end === 1) {
+    // return '//';
+    // Backwards-compat fix:
+    return '/';
+  }
+  return path.slice(0, end);
+};
+
+function basename(path) {
+  if (typeof path !== 'string') path = path + '';
+
+  var start = 0;
+  var end = -1;
+  var matchedSlash = true;
+  var i;
+
+  for (i = path.length - 1; i >= 0; --i) {
+    if (path.charCodeAt(i) === 47 /*/*/) {
+        // If we reached a path separator that was not part of a set of path
+        // separators at the end of the string, stop now
+        if (!matchedSlash) {
+          start = i + 1;
+          break;
+        }
+      } else if (end === -1) {
+      // We saw the first non-path separator, mark this as the end of our
+      // path component
+      matchedSlash = false;
+      end = i + 1;
+    }
+  }
+
+  if (end === -1) return '';
+  return path.slice(start, end);
+}
+
+// Uses a mixed approach for backwards-compatibility, as ext behavior changed
+// in new Node.js versions, so only basename() above is backported here
+exports.basename = function (path, ext) {
+  var f = basename(path);
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+exports.extname = function (path) {
+  if (typeof path !== 'string') path = path + '';
+  var startDot = -1;
+  var startPart = 0;
+  var end = -1;
+  var matchedSlash = true;
+  // Track the state of characters (if any) we see before our first dot and
+  // after any path separator we find
+  var preDotState = 0;
+  for (var i = path.length - 1; i >= 0; --i) {
+    var code = path.charCodeAt(i);
+    if (code === 47 /*/*/) {
+        // If we reached a path separator that was not part of a set of path
+        // separators at the end of the string, stop now
+        if (!matchedSlash) {
+          startPart = i + 1;
+          break;
+        }
+        continue;
+      }
+    if (end === -1) {
+      // We saw the first non-path separator, mark this as the end of our
+      // extension
+      matchedSlash = false;
+      end = i + 1;
+    }
+    if (code === 46 /*.*/) {
+        // If this is our first dot, mark it as the start of our extension
+        if (startDot === -1)
+          startDot = i;
+        else if (preDotState !== 1)
+          preDotState = 1;
+    } else if (startDot !== -1) {
+      // We saw a non-dot and non-path separator before our dot, so we should
+      // have a good chance at having a non-empty extension
+      preDotState = -1;
+    }
+  }
+
+  if (startDot === -1 || end === -1 ||
+      // We saw a non-dot character immediately before the dot
+      preDotState === 0 ||
+      // The (right-most) trimmed path component is exactly '..'
+      preDotState === 1 && startDot === end - 1 && startDot === startPart + 1) {
+    return '';
+  }
+  return path.slice(startDot, end);
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+},{"process":"../node_modules/process/browser.js"}],"img/archetype.png":[function(require,module,exports) {
+module.exports = "/archetype.1b7f38e3.png";
+},{}],"img/flo.png":[function(require,module,exports) {
+module.exports = "/flo.6a7ef71c.png";
+},{}],"img/flymyrtlebeach.png":[function(require,module,exports) {
+module.exports = "/flymyrtlebeach.12c5150e.png";
+},{}],"img/wetstone.png":[function(require,module,exports) {
+module.exports = "/wetstone.5454e5d6.png";
+},{}],"img/*.png":[function(require,module,exports) {
+module.exports = {
+  "archetype": require("./archetype.png"),
+  "flo": require("./flo.png"),
+  "flymyrtlebeach": require("./flymyrtlebeach.png"),
+  "wetstone": require("./wetstone.png")
+};
+},{"./archetype.png":"img/archetype.png","./flo.png":"img/flo.png","./flymyrtlebeach.png":"img/flymyrtlebeach.png","./wetstone.png":"img/wetstone.png"}],"js/components/project-info.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _path = _interopRequireDefault(require("path"));
+
+var _ = _interopRequireDefault(require("../../img/*.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//for some reason, trying to import /img/* doesn't work, but ../../img/* does
+//also note that import/require only support static arguments ie import(project.img) won't work
+var _default = {
+  data: function data() {
+    var imgExt = _path.default.extname(this.project.img);
+
+    var imgName = _path.default.basename(this.project.img, imgExt);
+
+    var dates = this.project.startDate;
+    if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
+    return {
+      imgExt: imgExt,
+      imgName: imgName,
+      imgUrl: _.default[imgName],
+      dates: dates
+    };
+  },
+  props: ['project']
+};
+exports.default = _default;
+        var $9e9280 = exports.default || module.exports;
+      
+      if (typeof $9e9280 === 'function') {
+        $9e9280 = $9e9280.options;
+      }
+    
+        /* template */
+        Object.assign($9e9280, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "project" }, [
+    _c("div", { staticClass: "project-header" }, [
+      _c("h2", { staticClass: "project-title" }, [
+        _vm._v(_vm._s(_vm.project.title))
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "project-dates",
+        domProps: { innerHTML: _vm._s(_vm.dates) }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "project-contents" }, [
+      _c("div", { staticClass: "project-info" }, [
+        _vm._v(_vm._s(_vm.project.desc))
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "project-img",
+        style: { backgroundImage: "url(" + _vm.imgUrl + ")" }
+      })
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-9e9280",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$9e9280', $9e9280);
+          } else {
+            api.reload('$9e9280', $9e9280);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"path":"../node_modules/path-browserify/index.js","../../img/*.png":"img/*.png","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/freelance-info.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _path = _interopRequireDefault(require("path"));
+
+var _ = _interopRequireDefault(require("../../img/*.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//for some reason, trying to import /img/* doesn't work, but ../../img/* does
+//also note that import/require only support static arguments ie import(project.img) won't work
+var _default = {
+  data: function data() {
+    var dates = this.project.startDate;
+    if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
+    return {
+      dates: dates
+    };
+  },
+  props: ['project']
+};
+exports.default = _default;
+        var $b4fd1d = exports.default || module.exports;
+      
+      if (typeof $b4fd1d === 'function') {
+        $b4fd1d = $b4fd1d.options;
+      }
+    
+        /* template */
+        Object.assign($b4fd1d, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "freelance" }, [
+    _c("div", { staticClass: "freelance-header" }, [
+      _c("h2", { staticClass: "freelance-title" }, [
+        _vm._v(_vm._s(_vm.project.title))
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "freelance-dates",
+        domProps: { innerHTML: _vm._s(_vm.dates) }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "freelance-info" }, [
+      _vm._v(_vm._s(_vm.project.desc))
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-b4fd1d",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$b4fd1d', $b4fd1d);
+          } else {
+            api.reload('$b4fd1d', $b4fd1d);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"path":"../node_modules/path-browserify/index.js","../../img/*.png":"img/*.png","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"data/projects.json":[function(require,module,exports) {
+module.exports = {
+  "projects": [{
+    "img": "/img/opensky.png",
+    "startDate": 2019,
+    "endDate": 2019,
+    "title": "Cyber Security Portal Development",
+    "desc": "Cyber security company lacked a streamlined process for collecting, organizing, analyzing, and delivering vulnerability data to customers. Worked as part of a team to design and develop a new portal and database management system with modern technologies and frameworks, for use by employees and customer users on any browser. Technologies used were C#, ASP.NET MVC, SQL Server, JavaScript, Node.js, and React."
+  }, {
+    "img": "/img/flymyrtlebeach.png",
+    "startDate": 2019,
+    "endDate": 2019,
+    "title": "FlyMyrtleBeach.com Website and Integrations",
+    "desc": "Myrtle Beach International Airport website was ailed with technical bugs and difficulty of use, having been built on top of an outdated content management system written in an obscure, restrictive language. Worked as a designer and the main developer to create a completely new, responsive, and cross-browser website with WordPress, and custom plugins were developed specifically for ease of use and integration with third party APIs, including A2 Analytics. Technologies used were WordPress, PHP, Node.js, and Adobe Illustrator."
+  }, {
+    "img": "/img/a2.png",
+    "startDate": 2018,
+    "endDate": 2019,
+    "title": "A2 Analytics",
+    "desc": "Worked on a team as the main developer and technical lead for an IoT solution to track Bluetooth devices indoors and outdoors. Implemented the project from scratch in Node.js using best practices and new technologies for use on remote devices and as a cloud service offering. Designed, architected, and implemented streaming, serverless backend for scale on AWS, including multiple environments and continuous integration and deployment. Technologies used were Node.js, Docker, AWS, MySQL, and Websockets."
+  }, {
+    "img": "/img/odysseys.png",
+    "startDate": 2018,
+    "endDate": 2018,
+    "title": "Travel and Tourism Portal Development",
+    "desc": "Travel and tourism portal suffered from bad user experience and poor usability as well as unmaintainable code that did not work in all environments (mobile, cross-browser). New navigation design was created and refined with peer and client feedback, and a new responsive, cross-browser navigation system was developed and implemented. Technologies used were HTML, CSS and SCSS, Twitter Bootstrap 4, JavaScript and jQuery."
+  }, {
+    "img": "/img/archetype.png",
+    "startDate": 2018,
+    "endDate": 2018,
+    "title": "ArchetypeSC.com Website Design and Development",
+    "desc": "ArchetypeSC website was outdated and no longer highlighted core company services. New website design was created and brought to life to better illustrate these values as well as creating a new, modern design to better represent the company and help it stand out amongst competitors. This design was created and refined with guidance from high level executives to be sure the company was represented accurately. Tools used were Sketch and Adobe Illustrator."
+  }, {
+    "img": "/img/flo.png",
+    "startDate": 2018,
+    "endDate": 2018,
+    "title": "FloLiving.com Website Development",
+    "desc": "FloLiving wanted to introduce a number of new products and services to their lineup on their website, and they designed a number of new web pages in-house to best represent these new offerings. These designs were brought to life on their website under short deadlines with no downtime at all, and were ready to be launched alongside their respective offerings. Technologies used were WordPress, PHP, HTML, CSS, and JavaScript."
+  }, {
+    "img": "/img/wetstone.png",
+    "startDate": 2017,
+    "endDate": 2018,
+    "title": "WetStoneTech.com Website Design and Development",
+    "desc": "WetStone Tech website was outdated, not responsive, and began running into licensing server issues. Unmaintainable code meant that these issues could not be fixed without reaching out to expensive contractors. Instead, a new website was designed and refined with employee feedback to give the company a more modern look to attract new clients as well as negate the issues they were facing.\n\nBuilt on top of the WordPress platform, the new site was able to be launched with very little downtime, and the company was now able to control their own content without having to pay anyone else. The new website also allowed the company to integrate Google AdWords, boosting their search engine presence and allowing them to advertise their product offerings. Technologies used were WordPress, PHP, HTML, CSS and SCSS, and JavaScript."
+  }],
+  "freelance": [{
+    "startDate": 2018,
+    "endDate": 2018,
+    "title": "Dave Russell Portfolio Website",
+    "desc": "Technologies used: WordPress, PHP, HTML, CSS and SCSS, JavaScript"
+  }, {
+    "startDate": 2017,
+    "endDate": 2017,
+    "title": "Andrew Ault Portfolio Website",
+    "desc": "Technologies used: Node.js, Express, HTML, CSS and SCSS, JavaScript ES2015, Babel"
+  }, {
+    "startDate": 2017,
+    "endDate": 2017,
+    "title": "Grafton Lodge Website",
+    "desc": "Technologies used: WordPress, PHP, HTML, CSS and SCSS, JavaScript"
+  }, {
+    "startDate": 2016,
+    "endDate": 2017,
+    "title": "Dylan Thompson Portfolio Website",
+    "desc": "Technologies used: PHP, Laravel, HTML, CSS and SCSS, JavaScript"
+  }]
+};
+},{}],"js/pages/index.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _heroBg = _interopRequireDefault(require("/js/components/hero-bg.vue"));
+
+var _projectInfo = _interopRequireDefault(require("/js/components/project-info.vue"));
+
+var _freelanceInfo = _interopRequireDefault(require("/js/components/freelance-info.vue"));
+
+var _projects = _interopRequireDefault(require("/data/projects.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      projects: _projects.default
+    };
+  },
+  components: {
+    heroBg: _heroBg.default,
+    projectInfo: _projectInfo.default,
+    freelanceInfo: _freelanceInfo.default
+  }
+};
+exports.default = _default;
+        var $78664b = exports.default || module.exports;
+      
+      if (typeof $78664b === 'function') {
+        $78664b = $78664b.options;
+      }
+    
+        /* template */
+        Object.assign($78664b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "hero" },
+      [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+      1
+    ),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("div", { staticClass: "page-container container" }, [
+      _c(
+        "section",
+        [
+          _c("h1", [_vm._v("My Portfolio")]),
+          _vm._v(" "),
+          _vm._l(_vm.projects.projects, function(project) {
+            return _c("project-info", { attrs: { project: project } })
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        [
+          _c("h1", [_vm._v("Freelance Projects")]),
+          _vm._v(" "),
+          _vm._l(_vm.projects.freelance, function(project) {
+            return _c("freelance-info", { attrs: { project: project } })
+          })
+        ],
+        2
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-text" }, [
+      _c("h1", { staticClass: "hero-text-title" }, [_vm._v("I'm Andrew Ault")]),
+      _vm._v(" "),
+      _c("h2", { staticClass: "hero-text-sub" }, [
+        _vm._v("I do programming, web, and graphic design")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "page-container container container-small" },
+      [
+        _c("h1", [_vm._v("About Me")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n\t \t\tI’m a Coastal Carolina University graduate with a BS in Information Systems and a minor in Graphic\n\t \t\tDesign from Myrtle Beach, South Carolina. I have extensive experience with programming, graphic design,\n\t \t\tand web development.\n\t \t"
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-78664b",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$78664b', $78664b);
+          } else {
+            api.reload('$78664b', $78664b);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"/js/components/hero-bg.vue":"js/components/hero-bg.vue","/js/components/project-info.vue":"js/components/project-info.vue","/js/components/freelance-info.vue":"js/components/freelance-info.vue","/data/projects.json":"data/projects.json","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/pages/blog.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _heroBg = _interopRequireDefault(require("/js/components/hero-bg.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {};
+  },
+  components: {
+    heroBg: _heroBg.default
+  }
+};
+exports.default = _default;
+        var $f4001b = exports.default || module.exports;
+      
+      if (typeof $f4001b === 'function') {
+        $f4001b = $f4001b.options;
+      }
+    
+        /* template */
+        Object.assign($f4001b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "hero" },
+    [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-text" }, [
+      _c("h1", { staticClass: "hero-text-title" }, [_vm._v("Coming soon!")])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-f4001b",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f4001b', $f4001b);
+          } else {
+            api.reload('$f4001b', $f4001b);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"/js/components/hero-bg.vue":"js/components/hero-bg.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/pages/404.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _heroBg = _interopRequireDefault(require("/js/components/hero-bg.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {};
+  },
+  components: {
+    heroBg: _heroBg.default
+  }
+};
+exports.default = _default;
+        var $0e7922 = exports.default || module.exports;
+      
+      if (typeof $0e7922 === 'function') {
+        $0e7922 = $0e7922.options;
+      }
+    
+        /* template */
+        Object.assign($0e7922, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "hero" },
+    [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-text" }, [
+      _c("h1", { staticClass: "hero-text-title" }, [_vm._v("404")]),
+      _vm._v(" "),
+      _c("h2", { staticClass: "hero-text-sub" }, [
+        _vm._v("That page wasn't found, sorry!")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-0e7922",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0e7922', $0e7922);
+          } else {
+            api.reload('$0e7922', $0e7922);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"/js/components/hero-bg.vue":"js/components/hero-bg.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"js/routes.js":[function(require,module,exports) {
 'use strict'; //
 
 Object.defineProperty(exports, "__esModule", {
@@ -23929,17 +25532,37 @@ exports.default = void 0;
 
 var _index = _interopRequireDefault(require("/js/views/index.vue"));
 
+var _index2 = _interopRequireDefault(require("/js/pages/index.vue"));
+
+var _blog = _interopRequireDefault(require("/js/pages/blog.vue"));
+
+var _ = _interopRequireDefault(require("/js/pages/404.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //
 var routes = [{
   path: '/',
   component: _index.default,
-  children: []
+  children: [{
+    path: '',
+    component: _index2.default
+  }, {
+    path: 'blog',
+    component: _blog.default //todo - move to component
+
+  }]
+}, {
+  path: '*',
+  component: _index.default,
+  children: [{
+    path: '*',
+    component: _.default
+  }]
 }];
 var _default = routes;
 exports.default = _default;
-},{"/js/views/index.vue":"js/views/index.vue"}],"../node_modules/normalize.css/normalize.css":[function(require,module,exports) {
+},{"/js/views/index.vue":"js/views/index.vue","/js/pages/index.vue":"js/pages/index.vue","/js/pages/blog.vue":"js/pages/blog.vue","/js/pages/404.vue":"js/pages/404.vue"}],"../node_modules/normalize.css/normalize.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -23967,7 +25590,8 @@ var router = new _vueRouter.default({
 });
 var app = new _vue.default({
   router: router
-});
+}); //
+
 app.$mount('#app');
 },{"vue/dist/vue.js":"../node_modules/vue/dist/vue.js","vue-router/dist/vue-router.js":"../node_modules/vue-router/dist/vue-router.js","/js/routes.js":"js/routes.js","normalize.css":"../node_modules/normalize.css/normalize.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -23997,7 +25621,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49989" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58618" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

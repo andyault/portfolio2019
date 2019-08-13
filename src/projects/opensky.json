@@ -1,0 +1,7 @@
+{
+	"img": "/img/opensky.png",
+	"startDate": 2019,
+	"endDate": 2019,
+	"title": "Cyber Security Portal Development",
+	"desc": "Cyber security company lacked a streamlined process for collecting, organizing, analyzing, and delivering vulnerability data to customers. Worked as part of a team to design and develop a new portal and database management system with modern technologies and frameworks, for use by employees and customer users on any browser. Technologies used were C#, ASP.NET MVC, SQL Server, JavaScript, Node.js, and React."
+}

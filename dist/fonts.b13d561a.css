@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/TTCommons-Bold.335401ec.woff2') format('woff2'),
+        url('/TTCommons-Bold.b065e944.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/TTCommons-DemiBold.b54400ec.woff2') format('woff2'),
+        url('/TTCommons-DemiBold.efa1597e.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/TTCommons-Italic.c5411ab9.woff2') format('woff2'),
+        url('/TTCommons-Italic.1c56a0a2.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/TTCommons-Regular.bfefb65c.woff2') format('woff2'),
+        url('/TTCommons-Regular.c35077ce.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*# sourceMappingURL=/fonts.b13d561a.css.map */

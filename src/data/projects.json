@@ -1,0 +1,79 @@
+{
+	"projects": [
+		{
+			"img": "/img/opensky.png",
+			"startDate": 2019,
+			"endDate": 2019,
+			"title": "Cyber Security Portal Development",
+			"desc": "Cyber security company lacked a streamlined process for collecting, organizing, analyzing, and delivering vulnerability data to customers. Worked as part of a team to design and develop a new portal and database management system with modern technologies and frameworks, for use by employees and customer users on any browser. Technologies used were C#, ASP.NET MVC, SQL Server, JavaScript, Node.js, and React."
+		},
+		{
+			"img": "/img/flymyrtlebeach.png",
+			"startDate": 2019,
+			"endDate": 2019,
+			"title": "FlyMyrtleBeach.com Website and Integrations",
+			"desc": "Myrtle Beach International Airport website was ailed with technical bugs and difficulty of use, having been built on top of an outdated content management system written in an obscure, restrictive language. Worked as a designer and the main developer to create a completely new, responsive, and cross-browser website with WordPress, and custom plugins were developed specifically for ease of use and integration with third party APIs, including A2 Analytics. Technologies used were WordPress, PHP, Node.js, and Adobe Illustrator."
+		},
+		{
+			"img": "/img/a2.png",
+			"startDate": 2018,
+			"endDate": 2019,
+			"title": "A2 Analytics",
+			"desc": "Worked on a team as the main developer and technical lead for an IoT solution to track Bluetooth devices indoors and outdoors. Implemented the project from scratch in Node.js using best practices and new technologies for use on remote devices and as a cloud service offering. Designed, architected, and implemented streaming, serverless backend for scale on AWS, including multiple environments and continuous integration and deployment. Technologies used were Node.js, Docker, AWS, MySQL, and Websockets."
+		},
+		{
+			"img": "/img/odysseys.png",
+			"startDate": 2018,
+			"endDate": 2018,
+			"title": "Travel and Tourism Portal Development",
+			"desc": "Travel and tourism portal suffered from bad user experience and poor usability as well as unmaintainable code that did not work in all environments (mobile, cross-browser). New navigation design was created and refined with peer and client feedback, and a new responsive, cross-browser navigation system was developed and implemented. Technologies used were HTML, CSS and SCSS, Twitter Bootstrap 4, JavaScript and jQuery."
+		},
+		{
+			"img": "/img/archetype.png",
+			"startDate": 2018,
+			"endDate": 2018,
+			"title": "ArchetypeSC.com Website Design and Development",
+			"desc": "ArchetypeSC website was outdated and no longer highlighted core company services. New website design was created and brought to life to better illustrate these values as well as creating a new, modern design to better represent the company and help it stand out amongst competitors. This design was created and refined with guidance from high level executives to be sure the company was represented accurately. Tools used were Sketch and Adobe Illustrator."
+		},
+		{
+			"img": "/img/flo.png",
+			"startDate": 2018,
+			"endDate": 2018,
+			"title": "FloLiving.com Website Development",
+			"desc": "FloLiving wanted to introduce a number of new products and services to their lineup on their website, and they designed a number of new web pages in-house to best represent these new offerings. These designs were brought to life on their website under short deadlines with no downtime at all, and were ready to be launched alongside their respective offerings. Technologies used were WordPress, PHP, HTML, CSS, and JavaScript."
+		},
+		{
+			"img": "/img/wetstone.png",
+			"startDate": 2017,
+			"endDate": 2018,
+			"title": "WetStoneTech.com Website Design and Development",
+			"desc": "WetStone Tech website was outdated, not responsive, and began running into licensing server issues. Unmaintainable code meant that these issues could not be fixed without reaching out to expensive contractors. Instead, a new website was designed and refined with employee feedback to give the company a more modern look to attract new clients as well as negate the issues they were facing.\n\nBuilt on top of the WordPress platform, the new site was able to be launched with very little downtime, and the company was now able to control their own content without having to pay anyone else. The new website also allowed the company to integrate Google AdWords, boosting their search engine presence and allowing them to advertise their product offerings. Technologies used were WordPress, PHP, HTML, CSS and SCSS, and JavaScript."
+		}
+	],
+	"freelance": [
+		{
+			"startDate": 2018,
+			"endDate": 2018,
+			"title": "Dave Russell Portfolio Website",
+			"desc": "Technologies used: WordPress, PHP, HTML, CSS and SCSS, JavaScript"
+		},
+		{
+			"startDate": 2017,
+			"endDate": 2017,
+			"title": "Andrew Ault Portfolio Website",
+			"desc": "Technologies used: Node.js, Express, HTML, CSS and SCSS, JavaScript ES2015, Babel"
+		},
+		{
+			"startDate": 2017,
+			"endDate": 2017,
+			"title": "Grafton Lodge Website",
+			"desc": "Technologies used: WordPress, PHP, HTML, CSS and SCSS, JavaScript"
+		},
+		{
+			"startDate": 2016,
+			"endDate": 2017,
+			"title": "Dylan Thompson Portfolio Website",
+			"desc": "Technologies used: PHP, Laravel, HTML, CSS and SCSS, JavaScript"
+		}
+	]
+}

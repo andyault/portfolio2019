@@ -1,0 +1,7 @@
+{
+	"img": "/img/odysseys.png",
+	"startDate": 2018,
+	"endDate": 2018,
+	"title": "Travel and Tourism Portal Development",
+	"desc": "Travel and tourism portal su ered from bad user experience and poor usability as well as unmaintainable code that did not work in all environments (mobile, cross-browser). New navigation design was created and re ned with peer and client feedback, and a new responsive, cross-browser navigation system was developed and implemented. Technologies used were HTML, CSS and SCSS, Twitter Bootstrap 4, JavaScript and jQuery."
+}

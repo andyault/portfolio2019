@@ -18,6 +18,7 @@
     "@vue/component-compiler-utils": "^3.0.0",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.22.9",
+    "vue-svg-loader": "^0.12.0",
     "vue-template-compiler": "^2.6.10"
   }
 }

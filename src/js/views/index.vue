@@ -11,13 +11,6 @@
 		flex: 1 1 auto;
 		overflow: auto;
 	}
-
-	.container {
-		width: 1200px;
-		margin: 0 auto;
-	}
-
-	.app-body-container { padding: 2rem 0; }
 </style>
 
 <template>
@@ -25,11 +18,7 @@
 		<app-header></app-header>
 
 		<div class="app-body">
-			<div class="app-body-container container">
-				<div style="height: 200vh">tall</div>
-
-				bottom
-			</div>
+			<router-view></router-view>
 		</div>
 	</div>
 </template>
