@@ -40,4 +40,25 @@ body {
   align-items: center;
 }
 
+.hero-text {
+  font-size: 1.5rem;
+  z-index: 999;
+  color: #000;
+  mix-blend-mode: difference;
+}
+
+@supports (mix-blend-mode: difference) {
+  .hero-text {
+    mix-blend-mode: difference;
+  }
+}
+.hero-text-title {
+  margin: 0;
+  text-align: center;
+}
+
+.hero-text-sub {
+  margin: 0;
+}
+
 /*# sourceMappingURL=/style.6b54f5b7.css.map */

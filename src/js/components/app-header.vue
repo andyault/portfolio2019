@@ -17,8 +17,6 @@
 
 	.app-header-logo {
 		display: block;
-		// padding: 1rem;
-		// margin-left: -1rem;
 		font-weight: bold;
 	}
 
@@ -28,16 +26,7 @@
 		text-decoration: none;
 
 		transition: color 0.333s;
-
-		&:hover { color: #90f; }
 	}
-
-	// .app-header-logo-inner {
-	// 	display: inline-block;
-	// 	position: relative;
-	// 	top: -4px;
-	// 	height: calc(1em + 8px);
-	// }
 
 	.app-header-link-inner {
 		display: inline-block;
@@ -47,7 +36,24 @@
 	}
 
 	.app-header-logo, .router-link-exact-active {
-		.app-header-link-inner { border-bottom: 4px solid #90f; }
+		.app-header-link-inner {
+			border-bottom-width: 4px;
+			border-bottom-style: solid;
+		}
+	}
+
+	.app-header-nav-list-item, .app-header-logo {
+		&:nth-of-type(1) {
+			&.app-header-link:hover, .app-header-link:hover { color: $col-primary; }
+			.app-header-link-inner { border-color: $col-primary; }
+		}
+
+		&:nth-of-type(2) {
+			.app-header-link:hover { color: $col-blog; }
+			.app-header-link-inner { border-color: $col-blog; }
+		}
+
+		&:nth-of-type(3) .app-header-link:hover { color: $col-resume; }
 	}
 
 	.app-header-nav-list {
@@ -76,11 +82,13 @@
 							<div class="app-header-link-inner">about</div>
 						</router-link>
 					</li>
+
 					<li class="app-header-nav-list-item">
 						<router-link class="app-header-link" to="/blog">
 							<div class="app-header-link-inner">blog</div>
 						</router-link>
 					</li>
+
 					<li class="app-header-nav-list-item">
 						<a class="app-header-link" :href="resume">
 							<div class="app-header-link-inner">resume</div>
@@ -96,10 +104,8 @@
 	import resume from '/static/resume.pdf';
 
 	export default {
-		data: function() {
-			return {
-				resume
-			};
-		}
+		data: () => ({
+			resume
+		})
 	}
 </script>

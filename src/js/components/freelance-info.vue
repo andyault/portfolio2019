@@ -25,18 +25,21 @@
 	import images from '../../img/*.png';
 
 	export default {
-		data: function data() {
-			let dates = this.project.startDate;
+		data: () => ({}),
 
-			if (!this.project.endDate)
-				dates += ' &mdash; Present';
-			else if (this.project.endDate !== this.project.startDate)
-				dates += ' &mdash; ' + this.project.endDate;
+		computed: {
+			dates: function dates() {
+				let dates = this.project.startDate;
 
-			return {
-				dates
-			};
+				if (!this.project.endDate)
+					dates += ' &mdash; Present';
+				else if (this.project.endDate !== this.project.startDate)
+					dates += ' &mdash; ' + this.project.endDate;
+
+				return dates;
+			},
 		},
+
 		props: ['project']
 	}
 </script>

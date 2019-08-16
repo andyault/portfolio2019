@@ -55,24 +55,28 @@
 	import images from '../../img/*.png';
 
 	export default {
-		data: function data() {
-			let imgExt = path.extname(this.project.img);
-			let imgName = path.basename(this.project.img, imgExt);
+		data: () => ({}),
 
-			let dates = this.project.startDate;
+		computed: {
+			imgUrl: function imgUrl() {
+				let imgExt = path.extname(this.project.img);
+				let imgName = path.basename(this.project.img, imgExt);
 
-			if (!this.project.endDate)
-				dates += ' &mdash; Present';
-			else if (this.project.endDate !== this.project.startDate)
-				dates += ' &mdash; ' + this.project.endDate;
+				return images[imgName];
+			},
 
-			return {
-				imgExt,
-				imgName,
-				imgUrl: images[imgName],
-				dates
-			};
+			dates: function dates() {
+				let dates = this.project.startDate;
+
+				if (!this.project.endDate)
+					dates += ' &mdash; Present';
+				else if (this.project.endDate !== this.project.startDate)
+					dates += ' &mdash; ' + this.project.endDate;
+
+				return dates;
+			}
 		},
+
 		props: ['project']
 	}
 </script>

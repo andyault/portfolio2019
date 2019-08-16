@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf dist && parcel src/index.html --open"
+    "start": "rm -rf docs && parcel src/index.html -d docs --open"
   },
   "author": "",
   "license": "ISC",

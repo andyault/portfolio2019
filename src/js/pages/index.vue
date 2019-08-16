@@ -1,25 +1,11 @@
 <style lang="scss" scoped>
-	.hero-text {
-		// font-size: 3rem;
-		font-size: 1.5rem;
-		z-index: 999;
-		// filter: invert(1); // grayscale(1) contrast(9);
-		color: #90f;
-		mix-blend-mode: difference;
+	@import '/css/vars.scss';
+	
+	@supports (mix-blend-mode: difference) {
+		.hero-text { color: $col-primary; /* invert() */ }
 	}
 
-	.hero-text-inv {
-		position: absolute;
-		color: #6f0;
-		mix-blend-mode: difference;
-	}
-
-	.hero-text-title {
-		margin: 0;
-		text-align: center;
-	}
-
-	.hero-text-sub { margin: 0; }
+	.hero-text-normal { color: $col-primary; }
 </style>
 
 <template>
@@ -30,11 +16,9 @@
 				<h2 class="hero-text-sub">I do programming, web, and graphic design</h2>
 			</div>
 
-			<!-- <div class="hero-text hero-text-inv">
-				I'm Andrew Ault
-			</div> -->
+			<div class="hero-text-normal" ref="heroText"></div>
 
-			<hero-bg></hero-bg>
+			<hero-bg :color="color"></hero-bg>
 		</div>
 
 		<div class="page-container container container-small">
@@ -72,8 +56,16 @@
 
 	export default {
 		data: () => ({
-			projects
+			projects,
+			color: ''
 		}),
+
+		mounted: function mounted() {
+			let elem = this.$refs.heroText;
+			let color = getComputedStyle(elem).color;
+
+			this.color = color;
+		},
 
 		components: {
 			heroBg,

@@ -23788,6 +23788,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -24083,47 +24091,61 @@ exports.default = void 0;
 //
 //
 //
-//
-// import FiltersSvg from '/img/filters.svg';
 var _default = {
   data: function data() {
     return {
       mult: 25,
-      sub: -7,
-      blobs: [{
+      sub: -7
+    };
+  },
+  computed: {
+    blobs: function blobs() {
+      return [{
         top: 40,
         left: -792,
         size: 893,
-        bg: '#90f'
+        bg: this.color
       }, {
         top: 195,
         left: 619,
         size: 480,
-        bg: '#90f'
+        bg: this.color
       }, {
         top: -85,
         left: -273,
         size: 288,
-        bg: '#90f'
+        bg: this.color,
+        originX: 500,
+        originY: 100,
+        rotation: 45
       }, {
         top: 28,
         left: -144,
         size: 100,
-        bg: '#90f'
+        bg: this.color,
+        originX: 500,
+        originY: 500,
+        rotation: 45
       }, {
         top: 559,
         left: 244,
         size: 720,
-        bg: '#90f'
+        bg: this.color,
+        originX: 250,
+        originY: 600,
+        rotation: -45
       }, {
         top: -284,
         left: 244,
         size: 216,
-        bg: '#90f'
-      }]
-    };
+        bg: this.color
+      }];
+    }
   },
-  components: {// FiltersSvg
+  props: {
+    color: {
+      default: '#000'
+    }
   }
 };
 exports.default = _default;
@@ -24818,18 +24840,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //also note that import/require only support static arguments ie import(project.img) won't work
 var _default = {
   data: function data() {
-    var imgExt = _path.default.extname(this.project.img);
+    return {};
+  },
+  computed: {
+    imgUrl: function imgUrl() {
+      var imgExt = _path.default.extname(this.project.img);
 
-    var imgName = _path.default.basename(this.project.img, imgExt);
+      var imgName = _path.default.basename(this.project.img, imgExt);
 
-    var dates = this.project.startDate;
-    if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
-    return {
-      imgExt: imgExt,
-      imgName: imgName,
-      imgUrl: _.default[imgName],
-      dates: dates
-    };
+      return _.default[imgName];
+    },
+    dates: function dates() {
+      var dates = this.project.startDate;
+      if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
+      return dates;
+    }
   },
   props: ['project']
 };
@@ -24940,11 +24965,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //also note that import/require only support static arguments ie import(project.img) won't work
 var _default = {
   data: function data() {
-    var dates = this.project.startDate;
-    if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
-    return {
-      dates: dates
-    };
+    return {};
+  },
+  computed: {
+    dates: function dates() {
+      var dates = this.project.startDate;
+      if (!this.project.endDate) dates += ' &mdash; Present';else if (this.project.endDate !== this.project.startDate) dates += ' &mdash; ' + this.project.endDate;
+      return dates;
+    }
   },
   props: ['project']
 };
@@ -25145,27 +25173,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
-      projects: _projects.default
+      projects: _projects.default,
+      color: ''
     };
+  },
+  mounted: function mounted() {
+    var elem = this.$refs.heroText;
+    var color = getComputedStyle(elem).color;
+    this.color = color;
   },
   components: {
     heroBg: _heroBg.default,
@@ -25190,7 +25208,13 @@ exports.default = _default;
     _c(
       "div",
       { staticClass: "hero" },
-      [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { ref: "heroText", staticClass: "hero-text-normal" }),
+        _vm._v(" "),
+        _c("hero-bg", { attrs: { color: _vm.color } })
+      ],
       1
     ),
     _vm._v(" "),
@@ -25321,19 +25345,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
-    return {};
+    return {
+      color: ''
+    };
+  },
+  mounted: function mounted() {
+    var elem = this.$refs.heroText;
+    var color = getComputedStyle(elem).color;
+    this.color = color;
   },
   components: {
     heroBg: _heroBg.default
@@ -25355,7 +25376,13 @@ exports.default = _default;
   return _c(
     "div",
     { staticClass: "hero" },
-    [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { ref: "heroText", staticClass: "hero-text-normal" }),
+      _vm._v(" "),
+      _c("hero-bg", { attrs: { color: _vm.color } })
+    ],
     1
   )
 }
@@ -25436,21 +25463,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
-    return {};
+    return {
+      color: ''
+    };
+  },
+  mounted: function mounted() {
+    var elem = this.$refs.heroText;
+    var color = getComputedStyle(elem).color;
+    this.color = color;
   },
   components: {
     heroBg: _heroBg.default
@@ -25472,24 +25494,23 @@ exports.default = _default;
   return _c(
     "div",
     { staticClass: "hero" },
-    [_vm._m(0), _vm._v(" "), _c("hero-bg")],
+    [
+      _c("div", { ref: "heroText", staticClass: "hero-text" }, [
+        _c("h1", { staticClass: "hero-text-title" }, [_vm._v("404")]),
+        _vm._v(" "),
+        _c("h2", { staticClass: "hero-text-sub" }, [
+          _vm._v("That page wasn't found, sorry!")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { ref: "heroText", staticClass: "hero-text-normal" }),
+      _vm._v(" "),
+      _c("hero-bg", { attrs: { color: _vm.color } })
+    ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hero-text" }, [
-      _c("h1", { staticClass: "hero-text-title" }, [_vm._v("404")]),
-      _vm._v(" "),
-      _c("h2", { staticClass: "hero-text-sub" }, [
-        _vm._v("That page wasn't found, sorry!")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -25621,7 +25642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58618" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

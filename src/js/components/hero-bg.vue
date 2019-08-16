@@ -6,13 +6,11 @@
 		top: 0; left: 0;
 		width: 100%; height: 100%;
 		overflow: hidden;
+		// background: #fff;
 	}
 
 	.blobs {
 		position: absolute;
-		// top: 50%; left: 50%;
-		// width: 0; height: 0;
-		// margin-top: -#{$header-height / 2};
 		top: 0; left: 0;
 		width: 100%; height: 100%;
 		filter: url('#goo');
@@ -30,6 +28,7 @@
 		position: absolute;
 		border-radius: 999vw;
 		transform: translate(-50%, -50%);
+		transition: all 3s;
 	}
 </style>
 
@@ -61,24 +60,27 @@
 </template>
 
 <script>
-	// import FiltersSvg from '/img/filters.svg';
-
 	export default {
 		data: () => ({
 			mult: 25,
 			sub: -7,
-			blobs: [
-				{ top: 40, left: -792, size: 893, bg: '#90f' },
-				{ top: 195, left: 619, size: 480, bg: '#90f' },
-				{ top: -85, left: -273, size: 288, bg: '#90f' },
-				{ top: 28, left: -144, size: 100, bg: '#90f' },
-				{ top: 559, left: 244, size: 720, bg: '#90f' },
-				{ top: -284, left: 244, size: 216, bg: '#90f' }
-			]
 		}),
 
-		components: {
-			// FiltersSvg
+		computed: {
+			blobs: function blobs() {
+				return [
+					{ top: 40, left: -792, size: 893, bg: this.color },
+					{ top: 195, left: 619, size: 480, bg: this.color },
+					{ top: -85, left: -273, size: 288, bg: this.color, originX: 500, originY: 100, rotation: 45 },
+					{ top: 28, left: -144, size: 100, bg: this.color, originX: 500, originY: 500, rotation: 45 },
+					{ top: 559, left: 244, size: 720, bg: this.color, originX: 250, originY: 600, rotation: -45 },
+					{ top: -284, left: 244, size: 216, bg: this.color }
+				];
+			}
+		},
+
+		props: {
+			color: { default: '#000' }
 		}
 	}
 </script>
