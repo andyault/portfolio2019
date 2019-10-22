@@ -24758,22 +24758,22 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-},{"process":"../node_modules/process/browser.js"}],"img/archetype.png":[function(require,module,exports) {
-module.exports = "/archetype.1b7f38e3.png";
-},{}],"img/flo.png":[function(require,module,exports) {
+},{"process":"../node_modules/process/browser.js"}],"img/flo.png":[function(require,module,exports) {
 module.exports = "/flo.6a7ef71c.png";
+},{}],"img/archetype.png":[function(require,module,exports) {
+module.exports = "/archetype.1b7f38e3.png";
 },{}],"img/flymyrtlebeach.png":[function(require,module,exports) {
 module.exports = "/flymyrtlebeach.12c5150e.png";
 },{}],"img/wetstone.png":[function(require,module,exports) {
 module.exports = "/wetstone.5454e5d6.png";
 },{}],"img/*.png":[function(require,module,exports) {
 module.exports = {
-  "archetype": require("./archetype.png"),
   "flo": require("./flo.png"),
+  "archetype": require("./archetype.png"),
   "flymyrtlebeach": require("./flymyrtlebeach.png"),
   "wetstone": require("./wetstone.png")
 };
-},{"./archetype.png":"img/archetype.png","./flo.png":"img/flo.png","./flymyrtlebeach.png":"img/flymyrtlebeach.png","./wetstone.png":"img/wetstone.png"}],"js/components/project-info.vue":[function(require,module,exports) {
+},{"./flo.png":"img/flo.png","./archetype.png":"img/archetype.png","./flymyrtlebeach.png":"img/flymyrtlebeach.png","./wetstone.png":"img/wetstone.png"}],"js/components/project-info.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25642,7 +25642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61392" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49544" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
