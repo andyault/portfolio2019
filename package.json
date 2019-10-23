@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "rm -rf dist && parcel src/index.html",
-    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url ./portfolio2019/"
+    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url ."
   },
   "author": "",
   "license": "ISC",

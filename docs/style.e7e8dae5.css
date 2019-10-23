@@ -1,2 +1,2 @@
 *{box-sizing:border-box}.app,body,html{position:relative;min-width:100vw;min-height:100vh}html{font-size:16px;font-family:TT Commons,sans-serif}body{font-size:1.25rem;line-height:1.4}.container{width:1200px;margin:0 auto}.container-small{width:600px}.page-container{padding:2rem 0}.hero{display:flex;position:relative;height:calc(100vh - 80px);flex-direction:column;justify-content:center;align-items:center}.hero-text{font-size:1.5rem;z-index:999;color:#000;mix-blend-mode:difference}@supports (mix-blend-mode:difference){.hero-text{mix-blend-mode:difference}}.hero-text-title{margin:0;text-align:center}.hero-text-sub{margin:0}
-/*# sourceMappingURL=portfolio2019/style.e7e8dae5.css.map */
+/*# sourceMappingURL=style.e7e8dae5.css.map */
