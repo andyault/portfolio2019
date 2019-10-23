@@ -41,7 +41,7 @@
 		<div class="project-contents">
 			<div class="project-info">{{ project.desc }}</div>
 
-			<div class="project-img" :style="{ backgroundImage: `url(${imgUrl})` }">
+			<div class="project-img" v-if="imgUrl" :style="{ backgroundImage: `url(${imgUrl})` }">
 			</div>
 		</div>
 	</div>
