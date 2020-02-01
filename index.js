@@ -3,14 +3,22 @@ const path = require('path');
 const fs = require('fs');
 const https = require('https');
 
+const hostname = 'andrewault.me';
+
 //
 const app = express();
 
-const root = path.join(__dirname, 'docs');
-app.use(express.static(root));
+app.use((req, res, next) => {
+  if (req.protocol === 'http') {
+    res.redirect(301, `https://${req.headers.host}${req.url}`);
+  }
+  next();
+});
+
+app.use(express.static(path.join(__dirname, 'docs')));
 
 //
-const index = path.join(root, 'index.html');
+const index = path.join(root, 'docs/index.html');
 app.get('*', (req, res) => res.sendFile(index));
 
 //
@@ -20,6 +28,8 @@ const httpsOptions = {
   key: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.key'))
 };
 
-const server = https.createServer(httpsOptions, app);
-const port = process.env.PORT || 80;
-server.listen(port, () => console.log('running on port ' + port));
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(httpsOptions, app);
+
+httpServer.listen(80, hostname);
+httpsServer.listen(443, hostname);
