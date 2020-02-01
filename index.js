@@ -4,10 +4,17 @@ const fs = require('fs');
 const http = require('http');
 const https = require('https');
 
-const hostname = 'andrewault.me';
-
 //
+const httpsOptions = {
+  cert: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.crt')),
+  ca: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.ca-bundle')),
+  key: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.key'))
+};
+
 const app = express();
+
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(httpsOptions, app);
 
 app.use((req, res, next) => {
   if (req.protocol === 'http') {
@@ -23,14 +30,5 @@ const index = path.join(__dirname, 'docs/index.html');
 app.get('*', (req, res) => res.sendFile(index));
 
 //
-const httpsOptions = {
-  cert: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.crt')),
-  ca: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.ca-bundle')),
-  key: fs.readFileSync(path.join(__dirname, 'ssl/andrewault.me.key'))
-};
-
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(httpsOptions, app);
-
-httpServer.listen(80, hostname);
-httpsServer.listen(443, hostname);
+httpServer.listen(80);
+httpsServer.listen(443);
