@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const http = require('http');
 const https = require('https');
 
 const hostname = 'andrewault.me';
@@ -18,7 +19,7 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'docs')));
 
 //
-const index = path.join(root, 'docs/index.html');
+const index = path.join(__dirname, 'docs/index.html');
 app.get('*', (req, res) => res.sendFile(index));
 
 //
