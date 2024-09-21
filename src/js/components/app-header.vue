@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-	@import '/css/vars.scss';
+	@import 'src/css/vars.scss';
 
 	.app-header {
 		display: flex;
@@ -101,7 +101,7 @@
 </template>
 
 <script>
-	import resume from '/static/resume.pdf';
+	import resume from '~static/resume.pdf';
 
 	export default {
 		data: () => ({

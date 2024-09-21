@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-	@import '/css/vars.scss';
+	@import 'src/css/vars.scss';
 	
 	@supports (mix-blend-mode: difference) {
 		.hero-text { color: $col-blog; /* invert() */ }
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import heroBg from '/js/components/hero-bg.vue';
+	import heroBg from '~js/components/hero-bg.vue';
 
 	export default {
 		data: () => ({

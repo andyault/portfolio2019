@@ -50,7 +50,7 @@
 <script>
 	import path from 'path';
 
-	//for some reason, trying to import /img/* doesn't work, but ../../img/* does
+	//for some reason, trying to import ~img/*.png doesn't work, but ../../img/*.png does
 	//also note that import/require only support static arguments ie import(project.img) won't work
 	import images from '../../img/*.png';
 

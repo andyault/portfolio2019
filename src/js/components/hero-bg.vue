@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-	@import '/css/vars.scss';
+	@import 'src/css/vars.scss';
 
 	.hero-bg {
 		position: absolute;

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-	import appHeader from '/js/components/app-header.vue'
+	import appHeader from '~js/components/app-header.vue'
 
 	export default {
 		data: function() {

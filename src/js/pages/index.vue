@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-	@import '/css/vars.scss';
+	@import 'src/css/vars.scss';
 	
 	@supports (mix-blend-mode: difference) {
 		.hero-text { color: $col-primary; /* invert() */ }
@@ -48,11 +48,11 @@
 </template>
 
 <script>
-	import heroBg from '/js/components/hero-bg.vue';
-	import projectInfo from '/js/components/project-info.vue';
-	import freelanceInfo from '/js/components/freelance-info.vue';
+	import heroBg from '~js/components/hero-bg.vue';
+	import projectInfo from '~js/components/project-info.vue';
+	import freelanceInfo from '~js/components/freelance-info.vue';
 
-	import projects from '/data/projects.json';
+	import projects from '~data/projects.json';
 
 	export default {
 		data: () => ({
