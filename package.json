@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "rm -rf dist && parcel src/index.html",
-    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url ."
+    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url .",
+    "serve": "node index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
@@ -17,7 +19,7 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.0",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.22.9",
     "vue-svg-loader": "^0.12.0",
     "vue-template-compiler": "^2.6.10"
