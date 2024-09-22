@@ -11,6 +11,7 @@
     "serve": "node scripts/serve.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
