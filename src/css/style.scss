@@ -9,8 +9,11 @@ html, body, .app {
 }
 
 html {
-	font-size: $base-unit;
-	font-family: 'TT Commons', sans-serif;
+	// font-size: $base-unit;
+	// font-family: 'TT Commons', sans-serif;
+	
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
