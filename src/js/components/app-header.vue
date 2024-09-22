@@ -101,7 +101,7 @@
 </template>
 
 <script>
-	import resume from '~static/resume.pdf';
+	import resume from '~static/resume2024.pdf';
 
 	export default {
 		data: () => ({

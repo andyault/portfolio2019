@@ -26,8 +26,8 @@
 
 		 	<p>
 		 		I’m a Coastal Carolina University graduate with a BS in Information Systems and a minor in Graphic
-		 		Design from Myrtle Beach, South Carolina. I have extensive experience with programming, graphic design,
-		 		and web development.
+		 		Design from Wilmington, North Carolina. I have extensive experience with programming, graphic design,
+		 		full stack web development and architecture.
 		 	</p>
 		</div>
 
