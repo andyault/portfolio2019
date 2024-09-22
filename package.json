@@ -7,8 +7,8 @@
   "license": "ISC",
   "scripts": {
     "start": "rm -rf dist && parcel src/index.html",
-    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url .",
-    "serve": "node index"
+    "build": "rm -rf docs && parcel build src/index.html -d dist --public-url .",
+    "serve": "node scripts/serve.js"
   },
   "dependencies": {
     "express": "^4.17.1",
